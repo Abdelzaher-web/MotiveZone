@@ -1,0 +1,50 @@
+/* Start work section  */
+.work{
+    padding: $padding 0px;
+    overflow: hidden;
+    
+    .img{
+        img{
+            width: 80%;
+            height: 100%;
+        }
+    }
+
+    .text{
+        padding: $padding 0px;
+        h2{
+            font-weight: bold;
+            margin-bottom: 25px;
+        }
+        p{
+            margin-bottom: 30px;
+        }
+        .form{
+            background-color:#FAF9F7;
+            padding: 10px;
+            width: 70%;
+            border:1px solid #EDE5D9;
+            @media (max-width:557px) {
+                width: 95%;
+            }
+            
+            input{
+                background-color: transparent;
+                border:none;
+                outline: none;
+                width: 75%;
+            }
+
+            button{
+                background-color: $mainColor;
+                padding: 7px 0px;
+                font-size: 18px;
+                color:#fff;
+                text-align: center;
+                width: 23%;
+                
+            }
+        }
+    }
+}
+/* End work section  */

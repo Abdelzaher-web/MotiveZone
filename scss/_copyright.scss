@@ -1,0 +1,80 @@
+/* Start copyright section */
+.copyright{
+    padding: 30px 0px;
+    background-color: #011021;
+    overflow: hidden;
+    ul{
+        @media (max-width:768px) {
+            text-align: center;
+            margin-bottom: 30px;
+            a{
+                padding-left: none;
+            }
+        }
+        @media (max-width:557px) {
+            text-align: left;
+            a{
+                display: block;
+                margin-bottom: 5px;
+            }
+        }
+        a{
+            text-decoration: none;
+            color: #A9B2BC;
+            padding:10px 10px;
+            @include transtionease();
+            &:hover{
+                color: $mainColor;
+            }
+        }
+    }
+    .follow-icons{
+        text-align: center;
+        @media (max-width:768px) {
+            margin-bottom:30px
+        }
+        a{
+            position: relative;
+            width: 40px;
+            height: 40px;
+            color: #fff;
+            border-radius: 50%;
+            margin:-5px 10px 0px 10px;
+            @include transtionease();
+            &.facebook{
+                background-color: #3A5897;
+                &:hover{
+                    box-shadow: 0px 0px 9px 5px #3A5897;
+                }
+            }
+            &.twitter{
+                background-color: #1DA0F1;
+                &:hover{
+                    box-shadow: 0px 0px 9px 5px #1DA0F1;
+                }
+            }
+            &.youtube{
+                background-color: #C4302B;
+                &:hover{
+                    box-shadow: 0px 0px 9px 5px #C4302B;
+                }
+            }
+            .icon{
+                @include transformcenter();
+            }
+        }
+    }
+
+    .text{
+        color:#A9B2BC;
+        text-align: right;
+        @media (max-width:768px) {
+            text-align: center;
+        }
+        span{
+            color: $mainColor;
+        }
+    }
+
+}
+/* End copyright section */

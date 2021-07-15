@@ -1,0 +1,141 @@
+/* 
+Web developer : Youssef Abdelzaher
+Develop date : 7/15/2021
+ */
+$mainColor:#FF9C00;
+$lastColor:#1B498A;
+$padding:50px;
+
+
+@mixin transtionease {
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+@mixin transformcenter {
+    position: absolute;
+    top:50%;
+    left:50%;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+
+}
+
+*,::after,::before{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Helvetica , Arial , tahoma;
+    &::-webkit-scrollbar{
+        width: 10px;
+        overflow: visible;
+    }
+    &::-webkit-scrollbar-track{
+        background-color: $lastColor;
+        box-shadow: 1px 1px 10px $mainColor;
+    }
+    &::-webkit-scrollbar-thumb{
+        background-color: $mainColor;
+        border-radius: 10px;
+        box-shadow: 1px 1px 10px $mainColor;
+    }
+}
+
+html{
+    scrollbar-width: inherit;
+    scrollbar-color: $mainColor $lastColor ;
+}
+
+*::selection{
+    background-color: $mainColor;
+    color: $lastColor;
+}
+
+img{
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.overlay{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width:100%;
+    background-color: rgba($color: #000000, $alpha: .95);
+    z-index: 100;
+    display: none;
+
+    .close{
+        position: fixed;
+        top: 15px;
+        right: 15px;
+        font-size: 25px;
+        color: #ccc;
+        cursor: pointer;
+        @include transtionease();
+
+        &:hover{
+            color: #fff;
+        }
+        
+
+    }
+
+}
+
+
+
+@import "./navbar";
+@import "./header";
+@import "./our-services";
+@import "./help";
+@import "./work";
+@import "./projects";
+@import "./slider";
+@import "./brands";
+@import "./footer";
+@import "./copyright";
+
+.scrollTop{
+    position: fixed;
+    bottom:15px;
+    background-color: $lastColor;
+    color: #fff;
+    padding:5px 10px;
+    font-size:25px;
+    -webkit-box-shadow: 0px 0px 5px $lastColor;
+    -moz-box-shadow: 0px 0px 5px $lastColor;
+    -o-box-shadow: 0px 0px 5px $lastColor;
+    -ms-box-shadow: 0px 0px 5px $lastColor;
+    box-shadow: 0px 0px 5px $lastColor;
+    cursor: pointer;
+    display: none;
+    right: 15px;
+    -webkit-transition: background-color,box-shadow .5s ease;
+    -moz-transition: background-color,box-shadow .5s ease;
+    -ms-transition: background-color,box-shadow .5s ease;
+    -o-transition: background-color,box-shadow .5s ease;
+    transition: background-color,box-shadow .5s ease;
+
+    &:hover{
+        color:#fff;
+        background-color:$mainColor;
+        -webkit-box-shadow: 0px 0px 5px $mainColor;
+        -moz-box-shadow: 0px 0px 5px $mainColor;
+        -o-box-shadow: 0px 0px 5px $mainColor;
+        -ms-box-shadow: 0px 0px 5px $mainColor;
+        box-shadow: 0px 0px 5px $mainColor;
+    }
+    
+}

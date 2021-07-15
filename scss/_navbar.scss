@@ -1,0 +1,122 @@
+/* Start navbar */
+.navbar{
+    background: transparent;
+    padding: 20px 0px;
+    position: fixed;
+    top:0px;
+    left:0px;
+    width:100%;
+    @include transtionease();
+    z-index: 99;
+
+    &.active{
+        padding: 10px 0px;
+        background-color: $lastColor;
+        box-shadow: 0px 1px 6px 3px;
+    }
+
+    .logo{
+        img{
+            width: 100%;
+        }
+    }
+
+    .links{
+        padding: 0px;
+        margin-bottom: 0px;
+        a{
+            color: #fff;
+            text-decoration: none;
+            text-transform: capitalize;
+            font-size:18px;
+            padding: 0px 10px;
+            transition: color .5s ease-in-out;
+            &:hover{
+                color:$mainColor;
+            }
+            
+        }
+    }
+    .button{
+        button{
+            background-color: $mainColor;
+            padding: 7px 20px;
+            text-transform: capitalize;
+            font-size: 18px;
+            color:#fff;
+            transition: all .5s ease-in-out;
+            border:2px solid transparent;
+            &:hover{
+                background-color: transparent;
+                border-color: $mainColor;
+                color:$mainColor
+            }
+        }
+    }
+
+    .bars{
+        button{
+            position: absolute;
+            top: 50%;
+            right:15px;
+            font-size: 25px;
+            color:#fff;
+            @include transtionease();
+            -webkit-transform: translateY(-50%);
+            -moz-transform: translateY(-50%);
+            -o-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+            &:hover{
+                color: $mainColor;
+            }
+            &:focus{
+                box-shadow: none;
+            }
+        }
+    }
+
+
+    
+
+}
+/* End navbar */
+
+.links-m{
+    position: fixed;
+    width: 30%;
+    height:100%;
+    left:0%;
+    top:0%;
+    padding: 10px 0px 0px 10px;
+    background-color: $lastColor;
+    font-size: 18px;
+    z-index: 101;
+    transform: translateX(-100%);
+    @include transtionease();
+    @media (max-width:768px) {
+        width: 80%;
+    }
+    
+    &.active{
+        transform: translateX(0%);
+    }
+
+    a{
+        display: block;
+        margin-bottom:20px;
+        text-decoration: none;
+        font-weight:bold;
+        color:#fff;
+        @include transtionease();
+
+        &:hover{
+            color:$mainColor
+        }
+
+        .icon{
+            margin-right:5px
+        }
+    }
+
+}

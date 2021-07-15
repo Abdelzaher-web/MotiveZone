@@ -1,0 +1,33 @@
+/* Start brands section */
+.brands{
+    padding:$padding 0px;
+    .item{
+        @media (max-width:992px) {
+            margin-bottom: 50px;
+        }
+        img{
+            @include transtionease();
+            -webkit-filter: grayscale(100%);
+            -moz-filter: grayscale(100%);
+            -o-filter: grayscale(100%);
+            -ms-filter: grayscale(100%);
+            filter: grayscale(100%);
+            @media (max-width:557px) {
+                -webkit-filter: none;
+                -moz-filter: none;
+                -o-filter: none;
+                -ms-filter: none;
+                filter: none;
+            }
+            
+            &:hover{
+                -webkit-filter: grayscale(0%);
+                -moz-filter: grayscale(0%);
+                -o-filter: grayscale(0%);
+                -ms-filter: grayscale(0%);
+                filter: grayscale(0%);
+            }
+        }
+    }
+}
+/* End brands section */

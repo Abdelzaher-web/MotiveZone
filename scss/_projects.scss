@@ -1,0 +1,117 @@
+/* Start projects section */
+.projects{
+    padding: $padding*2 0px;
+    background-image: url(../imgs/projects/background.png);
+    background-repeat: repeat-x;
+    background-size: 200% 130%;
+    color:#fff;
+    -webkit-animation: back 45s infinite linear;
+    -moz-animation: back 45s infinite linear;
+    -o-animation: back 45s infinite linear;
+    -ms-animation: back 45s infinite linear;
+    animation: back 45s infinite linear;
+    overflow: hidden;
+
+    @keyframes back {
+        0%{
+            background-position-x: -100%;
+        }
+        100%{
+            background-position-x: 1000%;
+        }
+    }
+
+    h2{
+        font-weight:bold;
+        margin-bottom:25px;
+    }
+    
+    p{
+        margin-bottom: 30px;
+    }
+
+    .item{
+        -webkit-transition: all .5s ease-in-out;
+        -moz-transition: all .5s ease-in-out;
+        -o-transition: all .5s ease-in-out;
+        -ms-transition: all .5s ease-in-out;
+        transition: all .5s ease-in-out;
+        margin-bottom: 20px;
+        
+        .img{
+            position: relative;
+            padding-top: 30px;
+            margin-bottom:30px;
+            .orginal{
+                position: relative;
+                width: 80%;
+                z-index: 3;
+            }
+            .shadow1{
+                position: absolute;
+                top: 30px;
+                left:0px;
+                width: 75%;
+                z-index: 2;
+                @include transtionease();
+            }
+            .shadow2{
+                position: absolute;
+                top: 30px;
+                left:0px;
+                width: 80%;
+                z-index: 1;
+                @include transtionease();
+            }
+        }
+        .text{
+            h5{
+                margin-bottom: 25px;
+            }
+            P{
+                margin-bottom:25px
+            }
+            a{
+                position: relative;
+                padding: 0px;
+                color: $mainColor;
+                .i{
+                    position: relative;
+                    top:2px;
+                    display: inline-block;
+                    margin-left:5px ;
+                    @include transtionease();
+                }
+            }
+        }
+
+        &:hover{
+            -webkit-transform: scale(1.05,1.05);
+            -moz-transform: scale(1.05,1.05);
+            -o-transform: scale(1.05,1.05);
+            -ms-transform: scale(1.05,1.05);
+            transform: scale(1.05,1.05);
+            overflow: hidden;
+            .img{
+                .shadow1{
+                    top: 20px;
+                    left:40px;
+                }
+                .shadow2{
+                    top: 10px;
+                    left:40px;
+                }
+            }
+            .text{
+                a{
+                    .i{
+                        margin-left: 10px;
+
+                    }
+                }
+            }
+        }
+    }
+
+}
+/* End projects section */

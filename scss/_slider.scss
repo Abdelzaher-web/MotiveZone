@@ -1,0 +1,54 @@
+/* Start slider section  */
+.slider-sec{
+    padding:$padding*2 0px;
+    overflow: hidden;
+
+    .img{
+        img{
+            width: 100%;
+        }
+    }
+
+    #slider{
+        padding: $padding 0px $padding 10px;
+
+        h5{
+            font-weight:bold;
+            margin-bottom:10px;
+        }
+
+        span{
+            margin-bottom: 25px;
+        }
+
+        p{
+            margin-bottom: 25px;
+        }
+
+        button{
+            position: relative;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            color:$mainColor;
+            border:2px solid $lastColor;
+            font-size: 25px;
+            &:focus{
+                box-shadow: none;
+            }
+
+            &:first-of-type{
+                margin-right: 10px;
+            }
+
+            .icon{
+                @include transformcenter();
+                
+            }
+
+        }
+
+    }
+
+}
+/* End slider section  */

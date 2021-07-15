@@ -1,0 +1,60 @@
+/* Start header */
+.header{
+    position: relative;
+    padding:$padding+133px 0px;
+    background-image: url(../imgs/header/background.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+    &::after{
+        content: "";
+        position: absolute;
+        bottom: 0px;
+        left:0px;
+        width: 100%;
+        height: 100px;
+        background-image:url(../imgs/header/effect.png);
+        background-size: 100% 100%;
+        background-repeat:no-repeat;
+
+    }
+
+    .text{
+        text-align: left;
+        padding-left: 20px;
+        h1{
+            color:#fff;
+            text-transform: capitalize;
+            font-weight:bold;
+            margin-bottom: 25px;
+        }
+        .description{
+            color: #fff;
+            font-size: 18px;
+        }
+    }
+
+    .img{
+        text-align: center;
+        img{
+            width: 95%;
+            margin-top:-80px ;
+        }
+    }
+
+    a{
+        background-color: $mainColor;
+        padding: 7px 20px;
+        font-size: 18px;
+        color:#fff;
+        transition: all .5s ease-in-out;
+        border:2px solid transparent;
+        &:hover{
+            background-color: transparent;
+            border-color: $mainColor;
+            color:$mainColor
+        }
+
+    }
+}
+/* End header */

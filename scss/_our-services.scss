@@ -1,0 +1,88 @@
+/* Start our services */
+.our-services{
+    padding: $padding 0px 100px 0px;
+    overflow: hidden;
+    h2{
+        font-weight:bold;
+        text-transform:capitalize;
+        margin-bottom: 25px;
+    }
+    .description{
+        margin-bottom: 50px;
+    }
+
+    .item{
+        margin-top:20px;
+        .icon{
+            position:relative;
+            padding: 21.25px;
+            margin-bottom:20px;
+            border-radius: 50%;
+            @include transtionease();
+            &::before{
+                content: "";
+                position: absolute;
+                top:0px;
+                left:0px;
+                height:100%;
+                width:100%;
+                background-color: $mainColor;
+                opacity: 5%;
+                border-radius: 50%;
+                @include transtionease();
+                z-index: -1;
+            }
+        }
+
+        h5{
+            margin-bottom: 25px;
+        }
+
+        p{
+            margin-bottom: 30px;
+        }
+
+        a{
+            position: relative;
+            padding: 0px;
+            color: $lastColor;
+            .i{
+                position: relative;
+                top:2px;
+                display: inline-block;
+                margin-left:5px ;
+                @include transtionease();
+            }
+            &:hover{
+                .i{
+                    margin-left: 10px;
+
+                }
+            }
+        }
+
+        &:hover{
+            
+            .icon{
+                -webkit-transform: rotate(360deg);
+                -moz-transform: rotate(360deg);
+                -o-transform: rotate(360deg);
+                -ms-transform: rotate(360deg);
+                transform: rotate(360deg);
+                
+                &::before{
+                    background-color: $lastColor;
+                    opacity: 1;
+                }
+            }
+
+            a{
+                .i{
+                    margin-left: 10px;
+
+                }
+            }
+        }
+    }
+}
+/* End our services */
