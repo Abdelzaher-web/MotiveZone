@@ -4,4 +4,4 @@
 
 # web building date : 7/15/2021
 
-### design url : https://freebiesui.com/xd-freebies/agency-landing-page-design/
+### Design url : https://freebiesui.com/xd-freebies/agency-landing-page-design/
